@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body,
+        .circle {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+        }
+
+        .circle {
+            width: 10em;
+            height: 10em;
+            border-width: .4em;
+            border-style: solid;
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: red;
+            border-bottom-color: blue;
+            position: relative;
+            animation: animate 4s ease-in-out infinite alternate;
+        }
+        .circle::before{
+            content: '';
+            position: absolute;
+            width: 75%;
+            height: 75%;
+            border-width: .4em;
+            border-style: solid;
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: orange;
+            border-bottom-color: cyan;
+            animation: animate 8s ease-in-out infinite alternate;
+        }
+        .circle::after{
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            border-width: .4em;
+            border-style: solid;
+            border-radius: 50%;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-top-color: yellow;
+            border-bottom-color: limegreen;
+            animation: animate 16s ease-in-out infinite alternate;
+        }
+        @keyframes animate{
+            from{
+                transform: rotate(0)
+            }
+            to{
+                transform: rotate(1440deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <dic class="circle-1"></dic>
+        <dic class="circle-2"></dic>
+        <dic class="circle-3"></dic>
+    </div>
+</body>
+
+</html>
